@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main>
+      <header
+        class="flex justify-between px-4 py-2 bg-white w-full fixed top-0"
+      >
+        <div class="flex justify-between items-center">
+          <img
+            class="w-12 h-fit max-sm:w-6 max-sm:absolute top-3 left-3"
+            src="https://icons.veryicon.com/png/System/Flatwoken/Apps%20google%20play%20books.png"
+            alt="Bool Logo"
+          />
+          <p class="max-sm:absolute top-4 left-8 font-bold text-3xl pl-4 max-sm:text-xs">
+            Booklist Management
+          </p>
+        </div>
+        <div class="flex justify-between items-center font-medium">
+          <svg class="max-sm:absolute top-2 right-40"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="m19.485 20.154l-6.262-6.262q-.75.639-1.725.989t-1.96.35q-2.402 0-4.066-1.663T3.808 9.503T5.47 5.436t4.064-1.667t4.068 1.664T15.269 9.5q0 1.042-.369 2.017t-.97 1.668l6.262 6.261zM9.538 14.23q1.99 0 3.361-1.37t1.37-3.361t-1.37-3.36t-3.36-1.37t-3.361 1.37t-1.37 3.36t1.37 3.36t3.36 1.37"
+            />
+          </svg>
+          <input
+            id="searchInput"
+            class="max-sm:absolute top-2 right-7 border border-black h-6 rounded px-2 max-sm:mr-8 max-sm:w-24"
+            type="text"
+            placeholder="Search..."
+          />
+          <div class="max-sm:hidden">
+            <a class="ml-4" href="#about"> About</a>
+            <a class="ml-4" href="#addList">Add List</a>
+            <a class="ml-4" href="#contact">Contact Us</a>
+          </div>
+          <div class="sm:hidden">
+            <button id="btnBurger">
+              <svg
+                class="max-sm:absolute right-3 top-3"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 2H.5m13 5H.5m13 5H.5"
+                />
+              </svg>
+            </button>
+            <div id="menuBar" class="hidden flex flex-col text-xs">
+              <a class="-ml-6" href="#about"> About</a>
+              <a class="-ml-6" href="#addList">Add List</a>
+              <a class="-ml-6" href="#contact">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div
+        id="mainContainer"
+        class="grid grid-cols-4 mx-2 mt-10 max-sm:grid-cols-1"
+      ></div>
+      <div class="mx-48 my-12 max-sm:mx-2">
+        <h1 class="text-center font-bold text-3xl pb-3" id="about">About</h1>
+        <p class="text-justify bg-slate-200 rounded-xl px-8 py-2">
+          "Situs Book List Management yang dikembangkan untuk memenuhi tugas-1
+          "Devscale Course 16 Week Fullstack Javascrip" memungkinkan pengguna
+          untuk menambahkan, mengedit, dan menghapus daftar buku dengan mudah.
+          Dengan fitur ini, pengguna dapat secara fleksibel mengelola koleksi
+          buku mereka, menambahkan entri baru, atau memperbarui informasi yang
+          ada sesuai kebutuhan. Dengan antarmuka yang ramah pengguna, pengalaman
+          pengguna dalam menjelajahi dan mengelola daftar buku mereka menjadi
+          lebih menyenangkan dan efisien."
+        </p>
+      </div>
+      <div class="max-w-[680px] m-auto">
+        <h1 class="text-center font-bold text-3xl" id="addList">
+          Add List Book
+        </h1>
+        <form id="formInput" class="mx-12 my-4 max-sm:mx-2">
+          <div class="flex justify-between gap-5 item-center">
+            <p class="max-sm:text-xs text-xl font-medium">Judul Buku :</p>
+            <input
+              class="border rounded border-2 mb-3 w-9/12 px-2"
+              type="text"
+              name="title"
+            />
+          </div>
+          <div class="flex justify-between gap-5 item-center">
+            <p class="max-sm:text-xs text-xl font-medium">Penulis :</p>
+            <input
+              class="border rounded border-2 mb-3 w-9/12 px-2"
+              type="text"
+              name="author"
+            />
+          </div>
+          <div class="flex justify-between gap-5 item-center">
+            <p class="max-sm:text-xs text-xl font-medium">Tahun :</p>
+            <input
+              class="border rounded border-2 mb-3 w-9/12 px-2"
+              type="text"
+              name="year"
+              id=""
+            />
+          </div>
+          <div class="flex justify-between gap-5 item-center">
+            <p class="max-sm:text-xs text-xl font-medium">Rating :</p>
+            <input
+              class="border rounded border-2 mb-3 w-9/12 px-2"
+              type="text"
+              name="rating"
+              id=""
+            />
+          </div>
+          <div class="flex justify-between gap-5 item-center">
+            <p class="max-sm:text-xs text-xl font-medium">Kategori</p>
+            <input
+              class="border rounded border-2 mb-3 w-9/12 px-2"
+              type="text"
+              name="category"
+              id=""
+            />
+          </div>
+          <div class="flex justify-between gap-5 item-center">
+            <p class="max-sm:text-xs text-xl font-medium">Cover :</p>
+            <input
+              placeholder="http://url.jpg/jpeg/png (optional)"
+              class="border rounded border-2 mb-3 w-9/12 px-2"
+              type="url"
+              name="cover"
+              id=""
+            />
+          </div>
+          <div class="flex justify-between gap-5 item-center">
+            <p class="max-sm:text-xs text-xl font-medium">Sinopsis :</p>
+            <textarea
+              class="border rounded border-2 mb-3 w-9/12 px-2"
+              type="text"
+              name="sinopsis"
+              id=""
+              rows="6"
+            ></textarea>
+          </div>
+          <div class="flex justify-between mt-2">
+            <p></p>
+            <button
+              class="bg-blue-500 px-2 rounded text-white font-medium"
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="bg-slate-200 px-4 py-1 ">
+        <p class="text-center font-medium text-xl" id="contact">Contact Us</p>
+        <div class="flex justify-between max-sm:flex-col max-sm:items-center">
+          <div class="flex justify-between item-center gap-4 max-sm:justify-center">
+            <a href="#">Instagram</a>
+            <a href="#">LinkIn</a>
+            <a href="#">GitHub</a>
+          </div>
+          <p>&copy; Copyright 2024 Devscale_Task1</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

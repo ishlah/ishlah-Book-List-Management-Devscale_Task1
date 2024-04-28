@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Book</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main>
+      <div class="max-w-[680px] m-auto">
+        <h1 class="text-center font-bold text-3xl max-sm:mt-3" id="addList">
+          Edit List Book
+        </h1>
+        <form id="formInput" class="mx-12 my-4 max-sm:mx-3">
+          <div class="flex justify-between gap-5 item-center">
+            <p class="max-sm:text-sm text-xl font-medium">Judul Buku :</p>
+            <input
+              id="title"
+              class="border rounded border-2 mb-3 w-9/12 px-2"
+              type="text"
+              name="title"
+            />
+          </div>
+          <div class="flex justify-between gap-5 item-center">
+            <p class="max-sm:text-sm text-xl font-medium">Penulis :</p>
+            <input
+              id="author"
+              class="border rounded border-2 mb-3 w-9/12 px-2"
+              type="text"
+              name="author"
+            />
+          </div>
+          <div class="flex justify-between gap-5 item-center">
+            <p class="max-sm:text-sm text-xl font-medium">Tahun :</p>
+            <input
+              class="border rounded border-2 mb-3 w-9/12 px-2"
+              type="text"
+              name="year"
+              id="year"
+            />
+          </div>
+          <div class="flex justify-between gap-5 item-center">
+            <p class="max-sm:text-sm text-xl font-medium">Rating :</p>
+            <input
+              class="border rounded border-2 mb-3 w-9/12 px-2"
+              type="text"
+              name="rating"
+              id="rating"
+            />
+          </div>
+          <div class="flex justify-between gap-5 item-center">
+            <p class="max-sm:text-sm text-xl font-medium">Kategori</p>
+            <input
+              class="border rounded border-2 mb-3 w-9/12 px-2"
+              type="text"
+              name="category"
+              id="category"
+            />
+          </div>
+          <div class="flex justify-between gap-5 item-center">
+            <p class="max-sm:text-sm text-xl font-medium">Cover url</p>
+            <input
+              class="border rounded border-2 mb-3 w-9/12 px-2"
+              type="url"
+              name="cover"
+              id="cover"
+            />
+          </div>
+          <div class="flex justify-between gap-5 item-center">
+            <p class="max-sm:text-sm text-xl font-medium">Sinopsis :</p>
+            <textarea
+              class="border rounded border-2 mb-3 w-9/12 px-2"
+              type="text"
+              name="sinopsis"
+              id="sinopsis"
+              rows="6"
+            ></textarea>
+          </div>
+          <div id="container" class="flex justify-between mt-2">
+            <p></p>
+            <button
+              class="bg-blue-500 px-8 rounded text-white font-medium"
+              type="submit"
+            >
+              Edit
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="update.js"></script>
+  </body>
+</html>
